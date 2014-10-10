@@ -7,12 +7,6 @@
       <%= f.error_message_on :name %>
     <% end %>
 
-    <%= f.field_container :permalink do %>
-      <%= f.label :permalink, raw(Spree.t(:permalink) + content_tag(:span, ' *',  :class => "required")) %>
-      <%= f.text_field :permalink, :class => 'fullwidth title' %>
-      <%= f.error_message_on :permalink %>
-    <% end %>
-
     <%= f.field_container :description do %>
       <%= f.label :description, Spree.t(:description) %>
       <%= f.text_area :description, {:rows => "#{unless @product.has_variants? then '20' else '13' end}", :class => 'fullwidth'} %>
